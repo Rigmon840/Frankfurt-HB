@@ -1,10 +1,18 @@
-# USB-Stick-Ersteller in Python
+# USB-Stick-Ersteller Pro
 
-Starte `usb_stick_ersteller.py` mit Python 3. Die Oberflaeche bietet zwei Schritte:
+Starte `usb_stick_ersteller.py` mit Python 3. Die Oberfläche unterstützt einen schnellen und stabilen Workflow:
 
-1. Klicke auf **EXE auswaehlen...** und waehle die auszufuehrende Datei.
-2. Waehle den USB-Stick und klicke auf **Stick erstellen**.
-3. Klicke auf **Ueberwachung starten**. Beim spaeteren Einstecken eines vorbereiteten Sticks wird die kopierte EXE gestartet.
-4. Auf einem neuen PC kannst du alternativ `START_USB.bat` auf dem Stick doppelt anklicken. Dafuer muss Python auf dem neuen PC nicht installiert sein.
+1. Klicke auf **EXE auswählen...** und wähle die auszuführende Datei.
+2. Wähle einen angeschlossenen USB-Stick aus und klicke auf **Stick erstellen**.
+3. Klicke auf **Überwachung starten**. Wenn ein vorbereiteter Stick später eingesteckt wird, öffnet die App die konfigurierte Datei automatisch.
+4. Auf einem neuen PC kannst du alternativ `START_USB.bat` auf dem Stick doppelt anklicken. Dafür muss Python dort nicht installiert sein.
 
-Auf dem Stick werden die ausgewaehlte EXE, `START_USB.bat` und `usb_auto_start.json` gespeichert. Windows erlaubt aus Sicherheitsgruenden keinen automatischen Start direkt durch das Einstecken eines USB-Sticks. Deshalb muss dieses Python-Programm auf dem PC laufen, wenn das Oeffnen wirklich beim Einstecken passieren soll. Eine `autorun.inf`-Datei waere auf aktuellen Windows-PCs keine funktionierende Loesung.
+Auf dem Stick werden die ausgewählte EXE, `START_USB.bat` und `usb_auto_start.json` gespeichert. Windows lässt einen Direktstart beim Einstecken aus Sicherheitsgründen nicht zu. Deshalb muss dieses Python-Programm auf dem Ziel-PC laufen, damit die vorbereitete Datei beim Einstecken wirklich gestartet wird.
+
+Neu in der verbesserten Version:
+- robustere USB-Erkennung und Aktualisierung
+- klarere Statusausgabe mit Zeitstempel
+- sichere Erstellung der Launcher-Dateien und Konfiguration
+- verbesserte Validierung von Datei und Zielpfad
+- einfacherer Zugriff auf den ausgewählten USB-Stick
+- bessere Fehlerbehandlung bei fehlender oder ungültiger Konfiguration
