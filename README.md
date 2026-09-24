@@ -16,3 +16,19 @@ Neu in der verbesserten Version:
 - verbesserte Validierung von Datei und Zielpfad
 - einfacherer Zugriff auf den ausgewählten USB-Stick
 - bessere Fehlerbehandlung bei fehlender oder ungültiger Konfiguration
+- dunkles Design und System-Tray-Icon
+
+## EXE und Installer bauen
+
+Mit PowerShell im Projektordner:
+
+```powershell
+.\build_app.ps1
+```
+
+Danach liegen die Dateien hier:
+
+- `dist\USB-Stick-Ersteller-Pro.exe`: portable Einzeldatei, Python ist auf dem Ziel-PC nicht nötig
+- `USB-Stick-Ersteller-Pro-Setup.exe`: normaler Windows-Installer mit Startmenü- und Desktop-Verknüpfung
+
+Der Installer bringt alle Python-Abhängigkeiten mit. Für einen neuen Build werden PyInstaller und Inno Setup benötigt; das Build-Skript findet Inno Setup automatisch in den üblichen Installationsordnern.

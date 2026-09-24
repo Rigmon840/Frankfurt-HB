@@ -185,7 +185,7 @@ class UsbStickApp:
         self.log(f"USB-Stick vorbereitet: {drive_path} -> {self.source_file.name}")
         messagebox.showinfo("Erfolgreich", f"Die Datei wurde nach {drive_path} kopiert und die Auto-Start-Konfiguration wurde eingerichtet.")
 
-    def toggle_monitoring(self):
+    def toggle_monitoring(self, _icon=None, _item=None):
         if self.monitoring:
             self.monitoring = False
             self.monitor_button.configure(text="Überwachung starten")
@@ -277,7 +277,7 @@ class UsbStickApp:
         )
         self.tray_icon.run_detached()
 
-    def show_window(self):
+    def show_window(self, _icon=None, _item=None):
         if self.root.state() == "withdrawn":
             self.root.deiconify()
         self.root.lift()
@@ -287,7 +287,7 @@ class UsbStickApp:
         self.root.withdraw()
         self.log("App in die Taskleiste minimiert.")
 
-    def close(self):
+    def close(self, _icon=None, _item=None):
         self.monitoring = False
         if self.tray_icon is not None:
             self.tray_icon.stop()
